@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1ek-8D-5ng">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Pdf View Controller-->
+        <scene sceneID="RRs-iR-uks">
+            <objects>
+                <viewController storyboardIdentifier="PdfViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="1ek-8D-5ng" customClass="PdfViewController" customModule="GoogleMapExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Qpw-mX-zr2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r8G-2k-4F2">
+                                <rect key="frame" x="20" y="98" width="374" height="26.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YTB-T1-NI4" customClass="PDFView">
+                                <rect key="frame" x="0.0" y="138" width="414" height="724"/>
+                                <color key="backgroundColor" red="1" green="0.93148699909651356" blue="0.84401988334396261" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="BnJ-Tp-fSZ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="r8G-2k-4F2" firstAttribute="top" secondItem="BnJ-Tp-fSZ" secondAttribute="top" constant="10" id="AG5-RD-rLp"/>
+                            <constraint firstItem="r8G-2k-4F2" firstAttribute="top" secondItem="BnJ-Tp-fSZ" secondAttribute="top" constant="10" id="MJq-CH-o3A"/>
+                            <constraint firstItem="r8G-2k-4F2" firstAttribute="leading" secondItem="BnJ-Tp-fSZ" secondAttribute="leading" constant="20" id="NAL-cE-fTv"/>
+                            <constraint firstItem="BnJ-Tp-fSZ" firstAttribute="bottom" secondItem="YTB-T1-NI4" secondAttribute="bottom" id="R08-q0-SKZ"/>
+                            <constraint firstItem="YTB-T1-NI4" firstAttribute="leading" secondItem="BnJ-Tp-fSZ" secondAttribute="leading" id="V86-UP-TU5"/>
+                            <constraint firstItem="BnJ-Tp-fSZ" firstAttribute="trailing" secondItem="YTB-T1-NI4" secondAttribute="trailing" id="Vvu-K7-dq8"/>
+                            <constraint firstItem="r8G-2k-4F2" firstAttribute="centerX" secondItem="BnJ-Tp-fSZ" secondAttribute="centerX" id="YMZ-d9-g7c"/>
+                            <constraint firstItem="BnJ-Tp-fSZ" firstAttribute="trailing" secondItem="r8G-2k-4F2" secondAttribute="trailing" constant="20" id="y61-yM-yEa"/>
+                            <constraint firstItem="YTB-T1-NI4" firstAttribute="top" secondItem="r8G-2k-4F2" secondAttribute="bottom" constant="13.5" id="z9j-HP-8KD"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="8A2-oH-XLe"/>
+                    <connections>
+                        <outlet property="pdfKitView" destination="YTB-T1-NI4" id="qfU-1I-sgU"/>
+                        <outlet property="pdfTitleLabel" destination="r8G-2k-4F2" id="Y2q-py-v9h"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tmN-x8-Div" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="57" y="-140"/>
+        </scene>
+        <!--Google Map View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="GoogleMapViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="GoogleMapViewController" customModule="GoogleMapExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l4P-10-Dbn" customClass="GMSMapView">
+                                <rect key="frame" x="20" y="64" width="374" height="778"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.63504713408801017" green="0.89210780137250212" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="l4P-10-Dbn" secondAttribute="bottom" constant="20" id="Gbo-Le-iDD"/>
+                            <constraint firstItem="l4P-10-Dbn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Hfh-4R-tMI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="l4P-10-Dbn" secondAttribute="trailing" constant="20" id="PFX-qv-Z4c"/>
+                            <constraint firstItem="l4P-10-Dbn" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="ZDS-KW-dNL"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="googleMapView" destination="l4P-10-Dbn" id="1mB-1a-Yr5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1266.6666666666667" y="-125.22321428571428"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="iZU-Fq-mMD">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Uc4-5Z-tev" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="FgM-fX-gX6">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="1ek-8D-5ng" kind="relationship" relationship="rootViewController" id="Asc-Fk-kDp"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="H7E-sz-wHv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-667" y="-135"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
